@@ -3,15 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Enrichment Hub - Under Construction</title>
+    <title>The Enrichment Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <div class="logo">The Enrichment Hub</div>
+        <div class="nav-links">
+            <a href="posts.html">Posts</a>
+            <a href="articles.html">Articles</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="stuff.html">My Stuff</a>
+            <a href="#contact">Contact Me</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Hi, I'm Enrich</h1>
+        <p class="subtitle">Developer | Creator | Problem Solver</p>
+        <p>Welcome to my personal space on the web</p>
+    </div>
+
     <div class="container">
-        <h1>The Enrichment Hub</h1>
-        <div class="status">UNDER CONSTRUCTION</div>
-        <div class="divider"></div>
-        <p class="coming-soon">Site launching soon</p>
+        <section id="about">
+            <h2>About Me</h2>
+            <p><em>Note: "Enrich" is not my real name - I use it online for privacy reasons.</em></p>
+            <p>I'm a new developer learning cybersecurity and C++. I have a passion for both the hardware and software sides of computers - from understanding how processors work to writing efficient code that runs on them.</p>
+            <p>Currently diving deep into low-level programming, system security, and building my own Linux system from scratch. Every day is a new opportunity to learn something fascinating about how computers really work under the hood.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>The Enrichment Hub</h3>
+                <p>This personal website you're currently viewing! Built with HTML and CSS, featuring a dark grey and green theme. A simple yet effective portfolio site to showcase my projects and connect with others.</p>
+            </div>
+            <div class="project-card">
+                <h3>Custom Linux OS</h3>
+                <p>Building my own Linux operating system from scratch using Linux From Scratch (LFS) with the help of Claude. This project involves compiling everything from the ground up, learning the inner workings of Linux, and creating a custom tailored OS that fits my specific needs.</p>
+            </div>
+            <div class="project-card">
+                <h3>Raspberry Pi Home Server</h3>
+                <p>Turning my Raspberry Pi 4 into the ultimate home server that I can access from anywhere using Tailscale. This project includes remote file storage, media streaming, and various self-hosted services - all accessible securely from any device on the go.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p>Interested in working together or just want to say hi? Feel free to reach out!</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/KludgeyLabs" target="_blank">KludgeyLabs</a></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>This site was developed with the help of <a href="https://claude.ai" target="_blank">Claude AI</a></p>
+        </footer>
     </div>
 </body>
 </html>
