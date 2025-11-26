@@ -1,0 +1,3 @@
+WE GOT CLOUDFLARE!!!
+
+I bought a custom domain and got a whole thing setup with cloudflare. I am really excited about this and now my site looks all that much more official

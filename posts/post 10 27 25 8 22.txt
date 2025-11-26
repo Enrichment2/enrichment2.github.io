@@ -1,0 +1,1 @@
+Added a new page to my site listing all my devices. I will add more to this page as I go on but as of right now it is very simple. I will probably add drop downs so you can see the full specs of all my devices.
