@@ -117,6 +117,51 @@
             content: "·";
             margin: 0 6px;
         }
+        .neocities-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #39ff14;
+            color: #1a1a1a;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-left: 8px;
+            cursor: help;
+            transition: background-color 0.2s ease;
+        }
+        .neocities-badge:hover {
+            background-color: #00ff00;
+        }
+        .info-icon {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #1a1a1a;
+            color: #39ff14;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        .tooltip {
+            display: none;
+            position: fixed;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 2px solid #39ff14;
+            font-size: 13px;
+            max-width: 300px;
+            z-index: 10000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        .tooltip.show {
+            display: block;
+        }
         .post-content {
             font-size: 15px;
             line-height: 1.6;
@@ -273,6 +318,10 @@
                 <div class="post-header">
                     <span class="post-username">Enrich</span>
                     <span class="post-date">November 3, 2025 - 1:44 PM</span>
+                    <span class="neocities-badge" onclick="event.stopPropagation(); showTooltip(event)">
+                        Neocities Era
+                        <span class="info-icon">i</span>
+                    </span>
                 </div>
                 <div class="post-content">
                     I still exist guys I have just been busy with work and school and other cool things (work).
@@ -286,6 +335,10 @@
                 <div class="post-header">
                     <span class="post-username">Enrich</span>
                     <span class="post-date">October 27, 2025 - 10:09 PM</span>
+                    <span class="neocities-badge" onclick="event.stopPropagation(); showTooltip(event)">
+                        Neocities Era
+                        <span class="info-icon">i</span>
+                    </span>
                 </div>
                 <div class="post-content">
                     I made it so the post thing was more like an actuall social media post layout. if i ever add pictures to posts that will work too. I was just kind of thinking about cool things I could do with the site like get an email list so that if you want an email every time i posted somthing then you could get it. I also will probably add another page where i write more in depth articles about things that are too long to just go in posts. I also plan to make tutorials for multiple different things so look forward to that. I also open sourced a school project that i did. It is a sudoku programm written in C++ that I am actually very proud of it. I have lots of cool ideas for things i can do with the web site.
@@ -299,6 +352,10 @@
                 <div class="post-header">
                     <span class="post-username">Enrich</span>
                     <span class="post-date">October 27, 2025 - 1:36 PM</span>
+                    <span class="neocities-badge" onclick="event.stopPropagation(); showTooltip(event)">
+                        Neocities Era
+                        <span class="info-icon">i</span>
+                    </span>
                 </div>
                 <div class="post-content">
                     I added some drop downs so that you all can see the specs of my devices. I just did it for the phone and laptop but i will do it for the rest of my devices later.
@@ -312,6 +369,10 @@
                 <div class="post-header">
                     <span class="post-username">Enrich</span>
                     <span class="post-date">October 27, 2025 - 8:40 PM</span>
+                    <span class="neocities-badge" onclick="event.stopPropagation(); showTooltip(event)">
+                        Neocities Era
+                        <span class="info-icon">i</span>
+                    </span>
                 </div>
                 <div class="post-content">
                     Made a bunch of UI/UX updates to the site. I think the recent posts feed makes a whole lot more sense cause now you can click on it to make it bigger and what not. I am having to much fun with this.
@@ -325,6 +386,10 @@
                 <div class="post-header">
                     <span class="post-username">Enrich</span>
                     <span class="post-date">October 27, 2025 - 8:29 PM</span>
+                    <span class="neocities-badge" onclick="event.stopPropagation(); showTooltip(event)">
+                        Neocities Era
+                        <span class="info-icon">i</span>
+                    </span>
                 </div>
                 <div class="post-content">
                     I updated the color of everything to match my favorite color more. I like the terminal looking feel to it. and so yeah
@@ -338,6 +403,10 @@
                 <div class="post-header">
                     <span class="post-username">Enrich</span>
                     <span class="post-date">October 27, 2025 - 8:22 PM</span>
+                    <span class="neocities-badge" onclick="event.stopPropagation(); showTooltip(event)">
+                        Neocities Era
+                        <span class="info-icon">i</span>
+                    </span>
                 </div>
                 <div class="post-content">
                     Added a new page to my site listing all my devices. I will add more to this page as I go on but as of right now it is very simple. I will probably add drop downs so you can see the full specs of all my devices.
@@ -351,6 +420,10 @@
                 <div class="post-header">
                     <span class="post-username">Enrich</span>
                     <span class="post-date">October 26, 2025 - 9:11 PM</span>
+                    <span class="neocities-badge" onclick="event.stopPropagation(); showTooltip(event)">
+                        Neocities Era
+                        <span class="info-icon">i</span>
+                    </span>
                 </div>
                 <div class="post-content">
                     Just uploaded the site to neocities! I finally have a personal site to use! Can't wait to upload updates about my cool projects here!!
@@ -364,6 +437,10 @@
                 <div class="post-header">
                     <span class="post-username">Enrich</span>
                     <span class="post-date">October 26, 2025</span>
+                    <span class="neocities-badge" onclick="event.stopPropagation(); showTooltip(event)">
+                        Neocities Era
+                        <span class="info-icon">i</span>
+                    </span>
                 </div>
                 <div class="post-content">
                     Just finished building this website using Claude Code right in my terminal! It's amazing how you can create a full site through conversational commands. The dark green theme turned out exactly how I wanted it.
@@ -371,6 +448,8 @@
             </div>
         </div>
     </div>
+
+    <div id="tooltip" class="tooltip"></div>
 
     <div id="postModal" class="modal">
         <div class="modal-content">
@@ -389,6 +468,30 @@
     </div>
 
     <script>
+        function showTooltip(event) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.textContent = 'These posts were made when the website was still hosted on Neocities before moving to Cloudflare.';
+            tooltip.classList.add('show');
+            
+            // Position the tooltip near the cursor
+            const x = event.clientX;
+            const y = event.clientY;
+            
+            tooltip.style.left = x + 10 + 'px';
+            tooltip.style.top = y + 10 + 'px';
+            
+            // Hide tooltip when clicking anywhere else
+            setTimeout(() => {
+                document.addEventListener('click', hideTooltip);
+            }, 100);
+        }
+        
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.classList.remove('show');
+            document.removeEventListener('click', hideTooltip);
+        }
+
         function openModal(date, content) {
             const modal = document.getElementById('postModal');
             const modalDate = document.getElementById('modalDate');
