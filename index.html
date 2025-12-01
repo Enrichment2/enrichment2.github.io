@@ -199,37 +199,6 @@
             font-size: 15px;
             transition: color 0.3s ease;
         }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .project-card {
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-            padding: 30px;
-            border: 2px solid var(--border-color);
-            border-left: 5px solid var(--accent-color);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .project-card:hover {
-            border-color: var(--accent-color);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(57, 255, 20, 0.2);
-        }
-        .project-card h3 {
-            color: var(--accent-color);
-            font-size: 24px;
-            margin-bottom: 15px;
-            transition: color 0.3s ease;
-        }
-        .project-card p {
-            line-height: 1.7;
-            color: var(--text-secondary);
-            font-size: 15px;
-            transition: color 0.3s ease;
-        }
         #posts {
             background-color: var(--bg-secondary);
             transition: background-color 0.3s ease;
@@ -533,7 +502,6 @@
             section h2 {
                 font-size: 28px;
             }
-            .projects-grid,
             .posts-grid {
                 grid-template-columns: 1fr;
             }
@@ -546,7 +514,6 @@
             <div class="logo">The Enrichment Hub</div>
             <div class="nav-links">
                 <a href="#about">About</a>
-                <a href="#projects">Projects</a>
                 <a href="#posts">Posts</a>
                 <a href="stuff.html">My Stuff</a>
                 <a href="articles.html">Articles</a>
@@ -572,26 +539,6 @@
                 <p><em>Note: "Enrich" is not my real name - I use it online for privacy reasons.</em></p>
                 <p>I'm a new developer learning cybersecurity and C++. I have a passion for both the hardware and software sides of computers - from understanding how processors work to writing efficient code that runs on them.</p>
                 <p>Currently diving deep into low-level programming, system security, and building my own Linux system from scratch. Every day is a new opportunity to learn something fascinating about how computers really work under the hood.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>The Enrichment Hub</h3>
-                    <p>This personal website you're currently viewing! Built with HTML and CSS, featuring a dark grey and green theme. A simple yet effective portfolio site to showcase my projects and connect with others.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Custom Linux OS</h3>
-                    <p>Building my own Linux operating system from scratch using Linux From Scratch (LFS) with the help of Claude. This project involves compiling everything from the ground up, learning the inner workings of Linux, and creating a custom tailored OS that fits my specific needs.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Raspberry Pi Home Server</h3>
-                    <p>Turning my Raspberry Pi 4 into the ultimate home server that I can access from anywhere using Tailscale. This project includes remote file storage, media streaming, and various self-hosted services - all accessible securely from any device on the go.</p>
-                </div>
             </div>
         </div>
     </section>
