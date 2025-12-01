@@ -10,15 +10,40 @@
             padding: 0;
             box-sizing: border-box;
         }
+        :root {
+            --bg-primary: #2a2a2a;
+            --bg-secondary: #1f1f1f;
+            --bg-tertiary: #1a1a1a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #c0c0c0;
+            --text-tertiary: #888;
+            --accent-color: #39ff14;
+            --accent-hover: #00ff00;
+            --border-color: #3a3a3a;
+            --shadow-color: #000;
+        }
+        :root.light-mode {
+            --bg-primary: #f5f5f5;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e8e8e8;
+            --text-primary: #1a1a1a;
+            --text-secondary: #333333;
+            --text-tertiary: #666666;
+            --accent-color: #2d9e00;
+            --accent-hover: #39ff14;
+            --border-color: #d0d0d0;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
         body {
             font-family: Verdana, Arial, sans-serif;
-            background-color: #2a2a2a;
-            color: #e0e0e0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         nav {
-            background-color: #1a1a1a;
+            background-color: var(--bg-tertiary);
             padding: 15px 0;
-            border-bottom: 3px solid #39ff14;
+            border-bottom: 3px solid var(--accent-color);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -34,26 +59,43 @@
         .logo {
             font-size: 22px;
             font-weight: bold;
-            color: #39ff14;
-            text-shadow: 2px 2px 0px #000;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 0px var(--shadow-color);
         }
         .nav-links {
             display: flex;
             gap: 25px;
+            align-items: center;
         }
         .nav-links a {
             padding: 8px 16px;
-            border: 2px solid #39ff14;
+            border: 2px solid var(--accent-color);
             background-color: transparent;
-            color: #39ff14;
+            color: var(--accent-color);
             text-decoration: none;
             border-radius: 4px;
             transition: all 0.3s ease;
             font-weight: 600;
         }
         .nav-links a:hover {
-            background-color: #39ff14;
-            color: #1a1a1a;
+            background-color: var(--accent-color);
+            color: var(--bg-tertiary);
+        }
+        .theme-toggle {
+            padding: 8px 16px;
+            border: 2px solid var(--accent-color);
+            background-color: transparent;
+            color: var(--accent-color);
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: Verdana, Arial, sans-serif;
+        }
+        .theme-toggle:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-tertiary);
         }
         .main-wrapper {
             position: relative;
@@ -87,25 +129,25 @@
             }
         }
         h1 {
-            color: #39ff14;
-            text-shadow: 2px 2px 0px #1a1a1a;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 0px var(--shadow-color);
         }
         p {
             line-height: 1.5;
-            color: #c0c0c0;
+            color: var(--text-secondary);
         }
         a {
-            color: #39ff14;
+            color: var(--accent-color);
             text-decoration: underline;
         }
         a:hover {
-            color: #00ff00;
+            color: var(--accent-hover);
         }
         .hero {
             text-align: center;
             padding: 60px 20px 40px;
-            background-color: #1f1f1f;
-            border-bottom: 3px solid #39ff14;
+            background-color: var(--bg-secondary);
+            border-bottom: 3px solid var(--accent-color);
         }
         .hero h1 {
             font-size: 36px;
@@ -113,36 +155,37 @@
         }
         .hero .subtitle {
             font-size: 18px;
-            color: #39ff14;
+            color: var(--accent-color);
             margin-bottom: 15px;
         }
         section {
             padding: 40px 0;
         }
         section h2 {
-            color: #39ff14;
+            color: var(--accent-color);
             font-size: 24px;
             margin-bottom: 15px;
-            border-bottom: 2px solid #39ff14;
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 5px;
+            transition: color 0.3s ease, border-color 0.3s ease;
         }
         .device-item {
-            background-color: #1f1f1f;
+            background-color: var(--bg-secondary);
             padding: 15px;
             margin-bottom: 15px;
-            border: 2px solid #3a3a3a;
-            border-left: 5px solid #39ff14;
+            border: 2px solid var(--border-color);
+            border-left: 5px solid var(--accent-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .device-item .device-type {
-            color: #39ff14;
+            color: var(--accent-color);
             font-weight: bold;
             font-size: 16px;
         }
         .device-item .device-name {
-            color: #c0c0c0;
+            color: var(--text-secondary);
             font-size: 16px;
         }
         details {
@@ -150,24 +193,25 @@
         }
         summary {
             cursor: pointer;
-            color: #39ff14;
+            color: var(--accent-color);
             font-size: 14px;
             padding: 5px 0;
             user-select: none;
         }
         summary:hover {
-            color: #00ff00;
+            color: var(--accent-hover);
         }
         .specs-content {
-            background-color: #0a0a0a;
+            background-color: var(--bg-tertiary);
             padding: 15px;
             margin-top: 10px;
-            border-left: 3px solid #39ff14;
+            border-left: 3px solid var(--accent-color);
             font-family: 'Courier New', monospace;
             font-size: 12px;
             white-space: pre-wrap;
             overflow-x: auto;
-            color: #a0a0a0;
+            color: var(--text-tertiary);
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
     </style>
 </head>
@@ -182,6 +226,7 @@
                 <a href="posts.html">Posts</a>
                 <a href="articles.html">Articles</a>
                 <a href="index.html#contact">Contact</a>
+                <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle">☀️ Light</button>
             </div>
         </div>
     </nav>
@@ -248,5 +293,42 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const root = document.documentElement;
+            const themeToggle = document.getElementById('themeToggle');
+            const isLightMode = root.classList.contains('light-mode');
+
+            if (isLightMode) {
+                root.classList.remove('light-mode');
+                themeToggle.textContent = '☀️ Light';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                root.classList.add('light-mode');
+                themeToggle.textContent = '🌙 Dark';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme preference on page load (default to dark mode)
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const root = document.documentElement;
+            const themeToggle = document.getElementById('themeToggle');
+
+            // Only apply light mode if explicitly saved
+            if (savedTheme === 'light') {
+                root.classList.add('light-mode');
+                themeToggle.textContent = '🌙 Dark';
+            } else {
+                // Default to dark mode
+                root.classList.remove('light-mode');
+                themeToggle.textContent = '☀️ Light';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
 </body>
 </html>
