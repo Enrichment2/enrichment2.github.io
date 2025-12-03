@@ -24,8 +24,8 @@ title: Home
     <div class="container">
         <h2>Recent Posts</h2>
         <div class="posts-grid">
-            {% for post in collections.posts | slice(0, 9) %}
-            <div class="post-card" onclick="openModal('{{ post.data.title }}', '{{ post.data.date | readableDate }}', {{ post.templateContent | dump | safe }})">
+            {% for post in collections.posts.slice(0, 9) %}
+            <div class="post-card" data-title="{{ post.data.title }}" data-date="{{ post.data.date | readableDate }}" onclick="openModalFromCard(this)">
                 <h3 class="post-title">{{ post.data.title }}</h3>
                 <div class="post-card-header">
                     <div class="post-avatar"><img src="/profile_pic.png" alt="Profile"></div>
@@ -101,6 +101,15 @@ title: Home
         const tooltip = document.getElementById('tooltip');
         tooltip.classList.remove('show');
         document.removeEventListener('click', hideTooltip);
+    }
+
+    function openModalFromCard(cardElement) {
+        const title = cardElement.getAttribute('data-title');
+        const date = cardElement.getAttribute('data-date');
+        const contentElement = cardElement.querySelector('.post-content');
+        const content = contentElement.innerHTML;
+
+        openModal(title, date, content);
     }
 
     function openModal(title, date, content) {
