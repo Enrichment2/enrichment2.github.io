@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: Enrichment2/theenrichmenthub
+  name: git-gateway
   branch: main
-  base_url: https://sensational-mandazi-51db5c.netlify.app
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
