@@ -2,6 +2,8 @@ backend:
   name: github
   repo: Enrichment2/theenrichmenthub
   branch: main
+  # You'll need to add your Netlify site URL here after creating it
+  # base_url: https://your-netlify-site.netlify.app
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
