@@ -26,6 +26,7 @@ title: Home
         <div class="posts-grid">
             {% for post in collections.posts | slice(0, 9) %}
             <div class="post-card" onclick="openModal('{{ post.data.title }}', '{{ post.data.date | readableDate }}', {{ post.templateContent | dump | safe }})">
+                <h3 class="post-title">{{ post.data.title }}</h3>
                 <div class="post-card-header">
                     <div class="post-avatar"><img src="/profile_pic.png" alt="Profile"></div>
                     <div class="post-info">

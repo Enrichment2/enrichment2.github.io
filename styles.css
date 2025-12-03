@@ -464,18 +464,28 @@ section h2::after {
     animation: glitch 0.3s;
 }
 
+.post-title {
+    color: var(--accent-color);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 20px 15px 20px;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 5px var(--accent-glow);
+}
+
 .post-card-header {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
-    padding: 15px 20px 0 20px;
+    margin-bottom: 15px;
+    padding: 0 20px;
 }
 
 .post-avatar {
     width: 40px;
     height: 40px;
-    border-radius: 0;
+    border-radius: 50%;
     background: var(--accent-color);
     display: flex;
     align-items: center;
@@ -495,6 +505,9 @@ section h2::after {
 }
 
 .post-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     flex-grow: 1;
 }
 
@@ -512,8 +525,8 @@ section h2::after {
 
 .post-date {
     color: var(--text-tertiary);
-    font-size: 11px;
-    margin-top: 2px;
+    opacity: 0.7;
+    font-size: 12px;
     font-family: 'Courier New', monospace;
 }
 
@@ -826,7 +839,7 @@ footer a:hover {
     background-color: var(--bg-tertiary);
     border: 2px solid var(--border-color);
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 0;
@@ -844,27 +857,26 @@ footer a:hover {
     font-family: 'Courier New', monospace;
 }
 
-.post > div {
-    display: flex;
-    gap: 15px;
-    padding: 15px;
-}
-
 .post:hover {
     border-color: var(--accent-color);
     box-shadow: 0 0 20px var(--accent-glow);
     transform: translateX(5px);
 }
 
-.post-main {
-    flex-grow: 1;
+.post .post-title {
+    padding: 20px 20px 15px 20px;
 }
 
 .post-header {
     display: flex;
-    align-items: baseline;
-    gap: 8px;
-    margin-bottom: 8px;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px 15px 20px;
+}
+
+.post .post-content {
+    padding: 0 20px 20px 20px;
+    -webkit-line-clamp: unset;
 }
 
 .post-date::before {

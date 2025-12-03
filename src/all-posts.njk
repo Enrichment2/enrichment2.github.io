@@ -9,22 +9,20 @@ permalink: /all-posts/
 
     {% for post in collections.posts %}
     <div class="post" onclick="openModal('{{ post.data.title }}', '{{ post.data.date | readableDate }}', {{ post.templateContent | dump | safe }})">
-        <div class="post-avatar"><img src="/profile_pic.png" alt="Profile"></div>
-        <div class="post-main">
-            <div class="post-header">
-                <span class="post-username">Enrich</span>
-                <span class="post-date">{{ post.data.date | readableDate }}</span>
-                {% if post.data.neocitiesEra %}
-                <span class="neocities-badge" onclick="event.stopPropagation(); showTooltip(event)">
-                    Neocities Era
-                    <span class="info-icon">i</span>
-                </span>
-                {% endif %}
+        <h3 class="post-title">{{ post.data.title }}</h3>
+        <div class="post-header">
+            <div class="post-avatar"><img src="/profile_pic.png" alt="Profile"></div>
+            <div class="post-username">Enrich</div>
+            <div class="post-date">{{ post.data.date | readableDate }}</div>
+            {% if post.data.neocitiesEra %}
+            <div class="neocities-badge" onclick="event.stopPropagation(); showTooltip(event)">
+                Neocities Era
+                <span class="info-icon">i</span>
             </div>
-            <h3 style="color: var(--accent-color); margin: 10px 0;">{{ post.data.title }}</h3>
-            <div class="post-content" style="-webkit-line-clamp: unset;">
-                {{ post.templateContent | safe }}
-            </div>
+            {% endif %}
+        </div>
+        <div class="post-content">
+            {{ post.templateContent | safe }}
         </div>
     </div>
     {% endfor %}
