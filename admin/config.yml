@@ -2,8 +2,7 @@ backend:
   name: github
   repo: Enrichment2/theenrichmenthub
   branch: main
-  base_url: https://cms-oauth-worker.enrich2009.workers.dev/
-  # Update the base_url above after deploying the Cloudflare Worker
+  base_url: https://cms-oauth.enrich2009.workers.dev
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow

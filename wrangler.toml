@@ -1,0 +1,10 @@
+name = "cms-oauth"
+main = "oauth-worker.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Public variables go here
+
+# Add secrets via CLI:
+# wrangler secret put GITHUB_CLIENT_ID
+# wrangler secret put GITHUB_CLIENT_SECRET
