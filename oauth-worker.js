@@ -75,20 +75,26 @@ export default {
   <p>Redirecting back to CMS...</p>
   <script>
     (function() {
+      const data = {
+        token: "${tokenData.access_token}",
+        provider: "github"
+      };
+
       function receiveMessage(e) {
-        console.log("Received message:", e);
+        console.log("Received message from:", e.origin);
         window.opener.postMessage(
-          'authorization:github:success:${JSON.stringify(tokenData)}',
+          "authorization:github:success:" + JSON.stringify(data),
           e.origin
         );
-        window.removeEventListener("message", receiveMessage, false);
       }
+
       window.addEventListener("message", receiveMessage, false);
 
+      // Post message to opener
       console.log("Posting token to opener");
       window.opener.postMessage(
-        'authorization:github:success:${JSON.stringify(tokenData)}',
-        window.location.origin
+        "authorization:github:success:" + JSON.stringify(data),
+        "*"
       );
 
       setTimeout(function() {
